@@ -4,19 +4,24 @@ This project is a POC for a talk about CoreML during App Builders 2018.
 
 ## Useful Info
 
-
 #### Raspberry PI Instance info
 
+```
 hostname: kitt
 username: pi
 password: kitt
+```
+
+to login
+```sh
+$ ssh pi@kitt.local
+```
+### Wifi
+
+SSID: Driving
+Pass: [no password]
 
 #### Packages to install
-
-```
-sudo apt-get install python3-pip
-sudo apt-get install python3-picamera
-```
 
 Install uv4l
 ```
@@ -29,8 +34,3 @@ sudo uv4l -nopreview --auto-video_nr --driver raspicam --encoding mjpeg --width 
 ```
 
 Start on boot edit rc.local
-
-### Wifi
-
-SSID: Driving
-Pass: [no password]
