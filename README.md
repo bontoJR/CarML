@@ -18,8 +18,10 @@ $ ssh pi@kitt.local
 ```
 ### Wifi
 
+```
 SSID: Driving
 Pass: [no password]
+```
 
 #### Packages to install
 
