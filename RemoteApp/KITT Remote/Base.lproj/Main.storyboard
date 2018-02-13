@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KITT_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9WX-nm-UTK">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oC-7B-Rdf" customClass="CDJoystick" customModule="KITT_Remote" customModuleProvider="target">
+                                <rect key="frame" x="20" y="205" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LPs-k8-gmD"/>
+                                    <constraint firstAttribute="height" constant="150" id="Sjm-Zi-LJ8"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tcu-cZ-lWH" customClass="CDJoystick" customModule="KITT_Remote" customModuleProvider="target">
+                                <rect key="frame" x="497" y="205" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="A4u-t9-oIq"/>
+                                    <constraint firstAttribute="width" constant="150" id="LOm-tT-aBG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5oC-7B-Rdf" secondAttribute="bottom" constant="20" id="FME-RP-v3E"/>
+                            <constraint firstItem="9WX-nm-UTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HOW-M3-Kpl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WX-nm-UTK" secondAttribute="trailing" id="PCk-aQ-ILh"/>
+                            <constraint firstItem="9WX-nm-UTK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XJp-jr-ilA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tcu-cZ-lWH" secondAttribute="trailing" constant="20" id="eHO-MZ-7aT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tcu-cZ-lWH" secondAttribute="bottom" constant="20" id="koR-6N-N91"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9WX-nm-UTK" secondAttribute="bottom" id="lOf-fh-xNu"/>
+                            <constraint firstItem="5oC-7B-Rdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y3j-OZ-PKt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9WX-nm-UTK" id="JCI-mJ-s3d"/>
+                        <outlet property="leftJoystick" destination="5oC-7B-Rdf" id="tjB-1u-Cts"/>
+                        <outlet property="rightJoystick" destination="Tcu-cZ-lWH" id="et1-FL-Z9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25.637181409295355" y="29.600000000000001"/>
+        </scene>
+    </scenes>
+</document>

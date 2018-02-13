@@ -1,0 +1,6 @@
+
+use_frameworks!
+
+target 'KITT Remote' do
+    pod 'Socket.IO-Client-Swift', '~> 13.1.0'
+end
