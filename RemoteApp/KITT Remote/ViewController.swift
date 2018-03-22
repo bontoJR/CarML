@@ -14,6 +14,7 @@ let stringURL = "http://kitt.local:9090/stream/video.mjpeg"
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var processedImageView: UIImageView!
     @IBOutlet weak var leftJoystick: CDJoystick!
     @IBOutlet weak var rightJoystick: CDJoystick!
     var steering: Float = 0.0
@@ -24,10 +25,18 @@ class ViewController: UIViewController {
     let manager = SocketManager(socketURL: URL(string: "http://kitt.local:8080")!, config: [.log(true), .compress])
     lazy var socket = manager.socket(forNamespace: "/drive")
     
+    let model = Autopilot()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        streamingController = StreamingController(imageView: imageView)
+        streamingController = StreamingController(imageView: imageView, onChangeImage: { (processedImage) in
+            guard let processedImage = processedImage.processImage(), let buffer = processedImage.buffer, let prediction = try? self.model.prediction(img_in: buffer) else {
+                return
+            }
+            self.processedImageView.image = processedImage.image
+            print("I think the angle should be \(prediction.angle_out).")
+        })
         
         // socket.io
         socket.on(clientEvent: .connect) { data, ack in

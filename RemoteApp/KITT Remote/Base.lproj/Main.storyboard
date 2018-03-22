@@ -35,12 +35,21 @@
                                     <constraint firstAttribute="width" constant="150" id="LOm-tT-aBG"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VtO-Zp-2Tw">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="QR9-dc-Hql"/>
+                                    <constraint firstAttribute="width" constant="160" id="ngR-43-Prv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5oC-7B-Rdf" secondAttribute="bottom" constant="20" id="FME-RP-v3E"/>
                             <constraint firstItem="9WX-nm-UTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HOW-M3-Kpl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WX-nm-UTK" secondAttribute="trailing" id="PCk-aQ-ILh"/>
+                            <constraint firstItem="VtO-Zp-2Tw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tmh-cg-vTe"/>
+                            <constraint firstItem="VtO-Zp-2Tw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XJm-mA-y1P"/>
                             <constraint firstItem="9WX-nm-UTK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XJp-jr-ilA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tcu-cZ-lWH" secondAttribute="trailing" constant="20" id="eHO-MZ-7aT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tcu-cZ-lWH" secondAttribute="bottom" constant="20" id="koR-6N-N91"/>
@@ -52,6 +61,7 @@
                     <connections>
                         <outlet property="imageView" destination="9WX-nm-UTK" id="JCI-mJ-s3d"/>
                         <outlet property="leftJoystick" destination="5oC-7B-Rdf" id="tjB-1u-Cts"/>
+                        <outlet property="processedImageView" destination="VtO-Zp-2Tw" id="Zh9-b3-IYD"/>
                         <outlet property="rightJoystick" destination="Tcu-cZ-lWH" id="et1-FL-Z9v"/>
                     </connections>
                 </viewController>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CD17DFE2063BE5A00BB4A3F /* Autopilot.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */; };
+		9CD17E012063BE7100BB4A3F /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */; };
+		9CD17E022063BE7100BB4A3F /* UIImage+Processing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17E002063BE7100BB4A3F /* UIImage+Processing.swift */; };
 		9FDCCC9EC4F00580696A9AD8 /* Pods_KITT_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C40DB0AED5B1467BC9EBFC /* Pods_KITT_Remote.framework */; };
 		CB4E754C2029B29500DF06C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E754B2029B29500DF06C3 /* AppDelegate.swift */; };
 		CB4E754E2029B29500DF06C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E754D2029B29500DF06C3 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		8E23C0343AD470B96D2F064B /* Pods-KITT Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KITT Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-KITT Remote/Pods-KITT Remote.release.xcconfig"; sourceTree = "<group>"; };
+		9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Autopilot.mlmodel; sourceTree = "<group>"; };
+		9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessedImage.swift; sourceTree = "<group>"; };
+		9CD17E002063BE7100BB4A3F /* UIImage+Processing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Processing.swift"; sourceTree = "<group>"; };
 		C9C40DB0AED5B1467BC9EBFC /* Pods_KITT_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KITT_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4E75482029B29500DF06C3 /* KITT Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KITT Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4E754B2029B29500DF06C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				CB4E754D2029B29500DF06C3 /* ViewController.swift */,
 				CB4E755D2029B2DB00DF06C3 /* StreamingController.swift */,
 				CB4E755F2029BD6E00DF06C3 /* CDJoystick.swift */,
+				9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */,
+				9CD17E002063BE7100BB4A3F /* UIImage+Processing.swift */,
+				9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */,
 				CB4E754F2029B29500DF06C3 /* Main.storyboard */,
 				CB4E75522029B29500DF06C3 /* Assets.xcassets */,
 				CB4E75542029B29500DF06C3 /* LaunchScreen.storyboard */,
@@ -231,7 +240,10 @@
 			files = (
 				CB4E754E2029B29500DF06C3 /* ViewController.swift in Sources */,
 				CB4E75602029BD6E00DF06C3 /* CDJoystick.swift in Sources */,
+				9CD17E012063BE7100BB4A3F /* ProcessedImage.swift in Sources */,
+				9CD17DFE2063BE5A00BB4A3F /* Autopilot.mlmodel in Sources */,
 				CB4E755E2029B2DB00DF06C3 /* StreamingController.swift in Sources */,
+				9CD17E022063BE7100BB4A3F /* UIImage+Processing.swift in Sources */,
 				CB4E754C2029B29500DF06C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,9 +383,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BGYDQR2GQ;
+				DEVELOPMENT_TEAM = D69C8C4P3Z;
 				INFOPLIST_FILE = "KITT Remote/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.bonto.KITT-Remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,9 +400,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4BGYDQR2GQ;
+				DEVELOPMENT_TEAM = D69C8C4P3Z;
 				INFOPLIST_FILE = "KITT Remote/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.bonto.KITT-Remote";
 				PRODUCT_NAME = "$(TARGET_NAME)";

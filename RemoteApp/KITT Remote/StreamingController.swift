@@ -26,9 +26,11 @@ open class StreamingController: NSObject, URLSessionDataDelegate {
     open var didFinishLoading: (()->Void)?
     open var contentURL: URL?
     open var imageView: UIImageView
+    open var onChangeImage: ((UIImage) -> ())?
     
-    public init(imageView: UIImageView) {
+    public init(imageView: UIImageView, onChangeImage: ((UIImage) -> ())? = nil) {
         self.imageView = imageView
+        self.onChangeImage = onChangeImage
         super.init()
         self.session = Foundation.URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
@@ -81,7 +83,12 @@ open class StreamingController: NSObject, URLSessionDataDelegate {
                 DispatchQueue.main.async { self.didFinishLoading?() }
             }
             
-            DispatchQueue.main.async { self.imageView.image = receivedImage }
+            DispatchQueue.main.async {
+                self.imageView.image = receivedImage
+                if let cb = self.onChangeImage {
+                    cb(receivedImage)
+                }
+            }
         }
         
         receivedData = NSMutableData()
