@@ -36,6 +36,12 @@ class ViewController: UIViewController {
             }
             self.processedImageView.image = processedImage.image
             print("I think the angle should be \(prediction.angle_out).")
+            let angle = prediction.angle_out[0].floatValue
+            let newVal = -1.0 * (angle / 10.0) + 0.1
+            if (fabsf(self.steering - newVal) > self.delta) {
+                self.steering = newVal
+                self.socket.emit("setSteering", with: [self.steering])
+            }
         })
         
         // socket.io
@@ -48,13 +54,13 @@ class ViewController: UIViewController {
         leftJoystick.trackingHandler =  { data in
             let newVal = -1.0 * Float(data.velocity.x)
             if (fabsf(self.steering - newVal) > self.delta) {
-                self.steering = newVal
-                self.socket.emit("setSteering", with: [self.steering])
+                //self.steering = newVal
+                //self.socket.emit("setSteering", with: [self.steering])
             }
         }
         
         rightJoystick.trackingHandler =  { data in
-            let newVal = Float(data.velocity.y)
+            let newVal = Float(data.velocity.y) * 0.5
             if (fabsf(self.speed - newVal) > self.delta) {
                 self.speed = newVal
                 self.socket.emit("setSpeed", with: [self.speed])
