@@ -36,3 +36,11 @@ sudo uv4l -nopreview --auto-video_nr --driver raspicam --encoding mjpeg --width 
 ```
 
 Start on boot edit rc.local
+
+#### Training Enviroment Setup
+
+* Python: 2.7
+* Tensorflow: 1.3.0
+* Keras: 2.0.8
+* CoreMlTools: 0.8
+
