@@ -18,6 +18,8 @@
 		CB4E75562029B29500DF06C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4E75542029B29500DF06C3 /* LaunchScreen.storyboard */; };
 		CB4E755E2029B2DB00DF06C3 /* StreamingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E755D2029B2DB00DF06C3 /* StreamingController.swift */; };
 		CB4E75602029BD6E00DF06C3 /* CDJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4E755F2029BD6E00DF06C3 /* CDJoystick.swift */; };
+		CB5FA3B2207153F900427A9A /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FA3B1207153F900427A9A /* DataPoint.swift */; };
+		CB85DC26207143B300F524FC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB85DC25207143B300F524FC /* DataController.swift */; };
 		CBECEEA92029FA58002797D5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CBECEEA82029FA58002797D5 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		CB4E75572029B29500DF06C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4E755D2029B2DB00DF06C3 /* StreamingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingController.swift; sourceTree = "<group>"; };
 		CB4E755F2029BD6E00DF06C3 /* CDJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDJoystick.swift; sourceTree = "<group>"; };
+		CB5FA3B1207153F900427A9A /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		CB85DC25207143B300F524FC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CBECEEA82029FA58002797D5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F09A5EFDB1EBA55E4AA0CE0D /* Pods-KITT Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KITT Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KITT Remote/Pods-KITT Remote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,19 +95,53 @@
 		CB4E754A2029B29500DF06C3 /* KITT Remote */ = {
 			isa = PBXGroup;
 			children = (
-				CB4E754B2029B29500DF06C3 /* AppDelegate.swift */,
-				CB4E754D2029B29500DF06C3 /* ViewController.swift */,
-				CB4E755D2029B2DB00DF06C3 /* StreamingController.swift */,
-				CB4E755F2029BD6E00DF06C3 /* CDJoystick.swift */,
+				CB85DC27207143E500F524FC /* Vendor */,
+				CB85DC28207143FE00F524FC /* Extensions */,
+				CB85DC292071443600F524FC /* Controllers */,
+				CB5FA3B1207153F900427A9A /* DataPoint.swift */,
 				9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */,
+				CB4E754D2029B29500DF06C3 /* ViewController.swift */,
+				CB4E754B2029B29500DF06C3 /* AppDelegate.swift */,
+				CB85DC2A2071445500F524FC /* Resources */,
+			);
+			path = "KITT Remote";
+			sourceTree = "<group>";
+		};
+		CB85DC27207143E500F524FC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CB4E755F2029BD6E00DF06C3 /* CDJoystick.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		CB85DC28207143FE00F524FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				9CD17E002063BE7100BB4A3F /* UIImage+Processing.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB85DC292071443600F524FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB85DC25207143B300F524FC /* DataController.swift */,
+				CB4E755D2029B2DB00DF06C3 /* StreamingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB85DC2A2071445500F524FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */,
 				CB4E754F2029B29500DF06C3 /* Main.storyboard */,
 				CB4E75522029B29500DF06C3 /* Assets.xcassets */,
 				CB4E75542029B29500DF06C3 /* LaunchScreen.storyboard */,
 				CB4E75572029B29500DF06C3 /* Info.plist */,
 			);
-			path = "KITT Remote";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +280,9 @@
 				CB4E75602029BD6E00DF06C3 /* CDJoystick.swift in Sources */,
 				9CD17E012063BE7100BB4A3F /* ProcessedImage.swift in Sources */,
 				9CD17DFE2063BE5A00BB4A3F /* Autopilot.mlmodel in Sources */,
+				CB5FA3B2207153F900427A9A /* DataPoint.swift in Sources */,
 				CB4E755E2029B2DB00DF06C3 /* StreamingController.swift in Sources */,
+				CB85DC26207143B300F524FC /* DataController.swift in Sources */,
 				9CD17E022063BE7100BB4A3F /* UIImage+Processing.swift in Sources */,
 				CB4E754C2029B29500DF06C3 /* AppDelegate.swift in Sources */,
 			);
@@ -383,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D69C8C4P3Z;
+				DEVELOPMENT_TEAM = 4BGYDQR2GQ;
 				INFOPLIST_FILE = "KITT Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -400,7 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D69C8C4P3Z;
+				DEVELOPMENT_TEAM = 4BGYDQR2GQ;
 				INFOPLIST_FILE = "KITT Remote/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,9 +41,13 @@
                                     <constraint firstAttribute="width" constant="160" id="ngR-43-Prv"/>
                                 </constraints>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lcW-R5-9AN">
+                                <rect key="frame" x="598" y="20" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lcW-R5-9AN" secondAttribute="trailing" constant="20" id="4bm-YE-uCX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5oC-7B-Rdf" secondAttribute="bottom" constant="20" id="FME-RP-v3E"/>
                             <constraint firstItem="9WX-nm-UTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HOW-M3-Kpl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WX-nm-UTK" secondAttribute="trailing" id="PCk-aQ-ILh"/>
@@ -54,6 +57,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tcu-cZ-lWH" secondAttribute="trailing" constant="20" id="eHO-MZ-7aT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tcu-cZ-lWH" secondAttribute="bottom" constant="20" id="koR-6N-N91"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9WX-nm-UTK" secondAttribute="bottom" id="lOf-fh-xNu"/>
+                            <constraint firstItem="lcW-R5-9AN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="u2S-Kl-a7p"/>
                             <constraint firstItem="5oC-7B-Rdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y3j-OZ-PKt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,6 +66,7 @@
                         <outlet property="imageView" destination="9WX-nm-UTK" id="JCI-mJ-s3d"/>
                         <outlet property="leftJoystick" destination="5oC-7B-Rdf" id="tjB-1u-Cts"/>
                         <outlet property="processedImageView" destination="VtO-Zp-2Tw" id="Zh9-b3-IYD"/>
+                        <outlet property="recordSwitch" destination="lcW-R5-9AN" id="Fu7-1d-W3R"/>
                         <outlet property="rightJoystick" destination="Tcu-cZ-lWH" id="et1-FL-Z9v"/>
                     </connections>
                 </viewController>

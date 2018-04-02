@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var processedImageView: UIImageView!
     @IBOutlet weak var leftJoystick: CDJoystick!
     @IBOutlet weak var rightJoystick: CDJoystick!
+    @IBOutlet weak var recordSwitch: UISwitch!
     var steering: Float = 0.0
     var speed: Float = 0.0
     var delta: Float = 0.05
@@ -31,9 +32,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         streamingController = StreamingController(imageView: imageView, onChangeImage: { (processedImage) in
+            if self.recordSwitch.isOn {
+                DispatchQueue.global().async {
+                    DataController.shared.savePointForImage(steering: self.steering, throttle: self.speed, image: processedImage)
+                }
+            }
+            /*
             guard let processedImage = processedImage.processImage(), let buffer = processedImage.buffer, let prediction = try? self.model.prediction(img_in: buffer) else {
                 return
             }
+            
             self.processedImageView.image = processedImage.image
             print("I think the angle should be \(prediction.angle_out).")
             let angle = prediction.angle_out[0].floatValue
@@ -41,7 +49,7 @@ class ViewController: UIViewController {
             if (fabsf(self.steering - newVal) > self.delta) {
                 self.steering = newVal
                 self.socket.emit("setSteering", with: [self.steering])
-            }
+            }*/
         })
         
         // socket.io
@@ -54,8 +62,8 @@ class ViewController: UIViewController {
         leftJoystick.trackingHandler =  { data in
             let newVal = -1.0 * Float(data.velocity.x)
             if (fabsf(self.steering - newVal) > self.delta) {
-                //self.steering = newVal
-                //self.socket.emit("setSteering", with: [self.steering])
+                self.steering = newVal
+                self.socket.emit("setSteering", with: [self.steering])
             }
         }
         
