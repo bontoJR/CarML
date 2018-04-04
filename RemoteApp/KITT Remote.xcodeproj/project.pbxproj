@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E90D5E720746276004987C7 /* Autopilot_v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E90D5E620746276004987C7 /* Autopilot_v2.mlmodel */; };
 		9CD17DFE2063BE5A00BB4A3F /* Autopilot.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */; };
 		9CD17E012063BE7100BB4A3F /* ProcessedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */; };
 		9CD17E022063BE7100BB4A3F /* UIImage+Processing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD17E002063BE7100BB4A3F /* UIImage+Processing.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E90D5E620746276004987C7 /* Autopilot_v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Autopilot_v2.mlmodel; sourceTree = "<group>"; };
 		8E23C0343AD470B96D2F064B /* Pods-KITT Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KITT Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-KITT Remote/Pods-KITT Remote.release.xcconfig"; sourceTree = "<group>"; };
 		9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Autopilot.mlmodel; sourceTree = "<group>"; };
 		9CD17DFF2063BE7100BB4A3F /* ProcessedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessedImage.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD17DFD2063BE5A00BB4A3F /* Autopilot.mlmodel */,
+				5E90D5E620746276004987C7 /* Autopilot_v2.mlmodel */,
 				CB4E754F2029B29500DF06C3 /* Main.storyboard */,
 				CB4E75522029B29500DF06C3 /* Assets.xcassets */,
 				CB4E75542029B29500DF06C3 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 			files = (
 				CB4E754E2029B29500DF06C3 /* ViewController.swift in Sources */,
 				CB4E75602029BD6E00DF06C3 /* CDJoystick.swift in Sources */,
+				5E90D5E720746276004987C7 /* Autopilot_v2.mlmodel in Sources */,
 				9CD17E012063BE7100BB4A3F /* ProcessedImage.swift in Sources */,
 				9CD17DFE2063BE5A00BB4A3F /* Autopilot.mlmodel in Sources */,
 				CB5FA3B2207153F900427A9A /* DataPoint.swift in Sources */,
